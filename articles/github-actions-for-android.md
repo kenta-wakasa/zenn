@@ -1,6 +1,6 @@
 ---
-title: "はじまった"
-emoji: "⛳"
+title: "GitHub Actions で Flutter アプリを Android 向けにデプロイする"
+emoji: ":💆🏼:"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [GitHubActions ]
 published: false
