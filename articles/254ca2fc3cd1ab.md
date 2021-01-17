@@ -6,6 +6,8 @@ topics: [flutter, ios, vscode, xcode, githubactions]
 published: true
 ---
 
+2021/01/017 追記 : [Android 版](https://zenn.dev/pressedkonbu/articles/github-actions-for-android)も書きました！
+
 # はじめに
 
 Flutter build iOS して Xcode で archive してそれをまた App Store Connect にアップロードして...という作業は面倒くさい。GitHub Actions を使えば push などをトリガーにこのやっかいな作業を自動化してくれるというじゃあないか。しかも、パブリックリポジトリなら無料で使わせていただけるという。これはもう、やるしかない。
