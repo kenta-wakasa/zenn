@@ -227,14 +227,14 @@ Repository Secrets の横の + アイコンをクリックすればどんどん�
 
 ターミナルをひらいて
 
-```
-base64 [変換したいファイル名] | tr -d ‘\n’ | pbcopy
+```shell:command
+% base64 [変換したいファイル名] | tr -d  "\n" | pbcopy
 ```
 
 と入力すればクリップボードに保存される。
 あとはそれを cmd + v でペーストしてあげればよい。
 
-ちなみに tr -d ‘\n’ は改行コードを削除している。
+ちなみに tr -d "\n" は改行コードを削除している。
 
 # ようやく Actions のワークフローを書いていく
 
@@ -280,8 +280,8 @@ https://qiita.com/messhi/items/cb8c6f2b4b6540995189
 info.plist に
 
 ```xml:info.plist
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
+  <key>ITSAppUsesNonExemptEncryption</key>
+  <false/>
 ```
 
 を追加すれば OK らしい。
