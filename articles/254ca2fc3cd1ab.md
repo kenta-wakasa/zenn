@@ -54,8 +54,7 @@ jobs:
       - name: Import Provisioning Profile
         run: | # 複数行の run を書きたい場合はこうする 以下、Provisioning Profilesを置くべきディレクトリにデコードしている
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          touch ~/Library/MobileDevice/Provisioning\ Profiles/distribution.mobileprovision
-          echo -n '${{ secrets.PROVISIONING_PROFILE }}' | base64 -d -o ~/Library/MobileDevice/Provisioning\ Profiles/sadistributionmple_dist.mobileprovision
+          run: echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/sadistributionmple_dist.mobileprovision
 
       # 署名をする
       - name: Import Code-Signing Certificates
