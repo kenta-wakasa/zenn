@@ -22,7 +22,7 @@ _この記事でできあがるもの_
 # 開発環境
 
     マシン: M1 MacBook Air
-    エディタ: VScode
+    エディタ: VSCode
     Flutter: 1.26.0-2.0.pre.402 • channel master
 
 # 作業の全体像

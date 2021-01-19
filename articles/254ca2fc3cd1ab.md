@@ -200,7 +200,7 @@ Xcode で一度アーカイブをしてそれを手元にダウンロードす�
 
 このファイルをプロジェクトのルートに配置した。
 
-# VScode に拡張機能をいれる
+# VSCode に拡張機能をいれる
 
 GitHub Actions を触りやすくなる拡張機能があるのでインストールする。
 https://marketplace.visualstudio.com/items?itemName=cschleiden.vscode-github-actions
@@ -217,7 +217,7 @@ GitHub Actions では Secrets に非公開情報を保存しておくことが�
 4. CERTIFICATE_PASSWORD (p12 ファイルのパスワード)
 5. PROVISIONING_PROFILE (Provisioning profile)
 
-さきほどインストールしておいた拡張機能を使うことで VScode からでも簡単に設定できる。
+さきほどインストールしておいた拡張機能を使うことで VSCode からでも簡単に設定できる。
 ![](https://storage.googleapis.com/zenn-user-upload/wh3j336qh90ym1j2um9t72byxo73)
 
 Repository Secrets の横の + アイコンをクリックすればどんどん追加できる。
