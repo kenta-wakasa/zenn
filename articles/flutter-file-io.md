@@ -174,7 +174,7 @@ await directory.create(recursive: true);
 
 ```dart
 final file = File('読み込みたいファイルの path');
-await file.readAsString(); // テキストデータならこう書く
+final String content = await file.readAsString(); // テキストデータならこう書く
 ```
 
 ### ファイルの書き込み
