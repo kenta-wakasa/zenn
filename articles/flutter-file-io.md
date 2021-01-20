@@ -174,14 +174,14 @@ await directory.create(recursive: true);
 
 ```dart
 final file = File('読み込みたいファイルの path');
-file.readAsStringSync(); // テキストデータならこう書く
+await file.readAsString(); // テキストデータならこう書く
 ```
 
 ### ファイルの書き込み
 
 ```dart
 final file = File('書き込みたいファイルの path');
-file.writeAsStringSync(DateTime.now().toString()); // テキストデータならこう書く
+await file.writeAsString(DateTime.now().toString()); // テキストデータならこう書く
 ```
 
 以上！
