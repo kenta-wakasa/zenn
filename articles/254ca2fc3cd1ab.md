@@ -1,5 +1,5 @@
 ---
-title: "GitHub Actions で Flutter アプリを iOS 向けにデプロイする"
+title: "【Flutter】GitHub Actions で iOS 向けに自動デプロイする"
 emoji: "🍎"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter, ios, vscode, xcode, githubactions]

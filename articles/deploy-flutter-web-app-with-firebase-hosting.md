@@ -1,5 +1,5 @@
 ---
-title: "Flutter Web を🚀爆速🚀で Firebase Hosting にデプロイする"
+title: "【Flutter】Web アプリを🚀爆速🚀で Firebase Hosting にデプロイする"
 emoji: "🚅"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter, firebase, githubactions, web, vscode]
