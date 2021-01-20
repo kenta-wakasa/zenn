@@ -1,6 +1,6 @@
 ---
 title: "Flutter で外部ファイルを読み書きする"
-emoji: "🗂"
+emoji: "📂"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter, io, ios, xcode, dart]
 published: true
