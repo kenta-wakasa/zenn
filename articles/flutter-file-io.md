@@ -31,14 +31,11 @@ _現在時刻をテキストデータとして書き込むアプリ_
 import 'package:flutter/material.dart';
 // riverpod を使う場合は忘れずに pubspec.yaml を編集して pub get
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'io_controller.dart';
 
 // ページは描画しているだけなので詳しい内容はコントローラーへ GO
 class IoPage extends ConsumerWidget {
   const IoPage({Key key}) : super(key: key);
-
-  /// どのインスタンスであっても不変な値を static として宣言する
   static const String title = '外部データの入出力';
   @override
   Widget build(BuildContext context, ScopedReader watch) {
@@ -54,22 +51,23 @@ class IoPage extends ConsumerWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            Text('アプリのローカルパス: \n${_ioProvider?.path}'),
+            Text('アプリのローカルパス: \n${_ioProvider?.appPath}'),
             Padding(
               padding: const EdgeInsets.all(16),
               child: SizedBox(
-                  width: MediaQuery.of(context).size.width,
+                  height: 25,
                   child: FittedBox(
-                    fit: BoxFit.fill,
+                    fit: BoxFit.fitHeight,
                     child: Text(
-                      _ioProvider.read,
+                      _ioProvider.content,
                     ),
                   )),
             ),
             Center(
               child: ElevatedButton(
-                onPressed: () {
-                  _ioProvider.write();
+                onPressed: () async {
+                  await _ioProvider.write();
+                  await _ioProvider.read();
                 },
                 child: const Text('いまの時間を書き込む'),
               ),
@@ -98,53 +96,46 @@ final ioProvider = ChangeNotifierProvider.autoDispose<IoController>(
 class IoController extends ChangeNotifier {
   IoController() {
     /// 初期化処理をここに書く
+    /// コンストラクタで非同期処理をやりたい場合どうすのがいいんでしょう？
     () async {
-      path = await localPath;
-      appDirectory = Directory('$path/playground/');
+      content = 'ファイルに書き込まれた時間を表示します';
+      final _localPath = await localPath;
+      appPath = '$_localPath/playground/';
+      appDirectory = Directory(appPath);
 
-      /// 既にそのファイルが存在しているか確かめている
-      if (appDirectory.existsSync()) {
-        print('${appDirectory.path} already exist');
-
-        /// 存在していなければディレクトリを作成
-      } else {
-        /// ディレクトリの作成はこう書く
-        await appDirectory.create(recursive: true);
-      }
-      path = appDirectory.path;
-    } ();
+      /// 新しくディレクトリをつくる
+      await appDirectory.create(recursive: true);
+    }();
   }
 
-  /// このプロバイダーが廃棄されるよきに呼ばれる
   @override
   void dispose() {
     super.dispose();
   }
 
-  String path;
+  String appPath;
+  String content;
   Directory appDirectory;
 
   /// ローカルパスの取得
   Future<String> get localPath async {
-    // アプリケーション固有のディレクトリパスを取得できる
     final directory = await getApplicationDocumentsDirectory();
     notifyListeners();
     return directory.path;
   }
 
   /// 現在時刻の書き込み
-  void write() {
-    final file = File('$path/test.txt');
+  Future<void> write() async {
+    final file = File('$appPath/test.txt');
     print('write: ${file.path}');
-    /// 現在時刻をテキストデータとして書き込み
-    file.writeAsStringSync(DateTime.now().toString());
-    notifyListeners();
+    await file.writeAsString(DateTime.now().toString());
   }
 
-  String get read {
-    final file = File('$path/test.txt');
-    // ファイルの中身を文字データとして読み込み
-    return file.readAsStringSync();
+  /// 現在時刻の読み込み
+  Future<void> read() async {
+    final file = File('$appPath/test.txt');
+    content = await file.readAsString();
+    notifyListeners();
   }
 }
 ```
