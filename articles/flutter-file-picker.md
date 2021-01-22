@@ -1,5 +1,5 @@
 ---
-title: "【Flutter】外部ファイルを取り込む"
+title: "【Flutter】外部ファイルを選択する"
 emoji: "🦀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter, file, googledrive, image, music]
