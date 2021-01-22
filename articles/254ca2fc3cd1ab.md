@@ -8,6 +8,12 @@ published: true
 
 2021/01/017 追記 : [Android 版](https://zenn.dev/pressedkonbu/articles/github-actions-for-android)も書きました！
 
+# 追記
+- 2021/01/22
+  コードが間違っていたので修正。
+  それとビルドネームが github_actios_sample とタイポしていることに気づいた。これはプロジェクトを作る時にミスってしまったらしい。
+
+
 # はじめに
 
 Flutter build iOS して Xcode で archive してそれをまた App Store Connect にアップロードして...という作業は面倒くさい。GitHub Actions を使えば push などをトリガーにこのやっかいな作業を自動化してくれるというじゃあないか。しかも、パブリックリポジトリなら無料で使わせていただけるという。これはもう、やるしかない。
@@ -54,7 +60,7 @@ jobs:
       - name: Import Provisioning Profile
         run: | # 複数行の run を書きたい場合はこうする 以下、Provisioning Profilesを置くべきディレクトリにデコードしている
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          run: echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/sadistributionmple_dist.mobileprovision
+          echo -n ${{ secrets.PROVISIONING_PROFILE }} | base64 -d > ~/Library/MobileDevice/Provisioning\ Profiles/distribution.mobileprovision
 
       # 署名をする
       - name: Import Code-Signing Certificates
