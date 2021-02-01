@@ -3,7 +3,7 @@ title: "【Flutter】ライフゲームそれは人生"
 emoji: "👨‍👩‍👧‍👦"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter, firebase, web, dart]
-published: false
+published: true
 ---
 
 # はじめに
