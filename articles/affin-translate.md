@@ -96,6 +96,7 @@ $$
 
 アフィン変換はこうなります。
 といっても、拡大、縮小、回転、平行移動だけで、せん断とかはやっていません。
+
 ```dart:アフィン変換をやってる部分
   Offset _affinTranslate(
     Offset pos, {
@@ -110,10 +111,13 @@ $$
   }
 
 ```
-----
-**コントローラー**
+
+---
+
+## コントローラー
 星を書いているのでその部分も何かの参考になればと思います。
 コードで図形を描くの楽しいですね。
+
 ````dart:canvas_controller.dart
 import 'dart:math';
 
@@ -195,9 +199,12 @@ class CanvasController extends ChangeNotifier {
 }
 
 ````
-----
-**ページ**
-スライダーとかテキストボックスで入力をやっています
+
+---
+
+## ページ
+スライダーとかテキストボックスで入力をやっています。
+
 ```dart:canvas_page.dart
 import 'dart:math';
 
@@ -295,12 +302,16 @@ class CanvasPage extends ConsumerWidget {
 }
 
 ```
-----
-**ペインター**
+
+---
+
+## ペインター
+
 ここで図形の描画をやっています。
 今回は offset で点群データを用意。
 それらを繋げて線分で描画、ということをやっています。
 `Path()..addPolygon` で点をつなげて線を書いていけます。
+
 ```dart:painter.dart
 import 'package:flutter/material.dart';
 
@@ -325,4 +336,5 @@ class Painter extends CustomPainter {
 ```
 
 # おしまいに
+
 `Offset` クラスにはスケールと平行移動のメソッドがあった気がしますが、原点を中心に回転するメソッドはないんですよね。普通につけておいてくれてもいい気がするんですが、と思いました。
