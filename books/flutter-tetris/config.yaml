@@ -1,0 +1,8 @@
+title: "Flutter で TETRIS をつくろう"
+summary: "本の概要"
+topics: [flutter,tetris,dart]
+published: false
+price: 500
+chapters:
+  - why-learning-tetris
+  - chapter2
