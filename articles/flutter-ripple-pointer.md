@@ -14,6 +14,10 @@ published: true
 Animation の使い方にまだ慣れていないため、冗長な書き方になっているかもしれません。
 もっと優れたやり方があれば教えてください！
 
+::: message
+細かな解説はコードのコメントにまわして本文は少なめな構成です
+:::
+
 # つくったもの
 
 @[codepen](https://codepen.io/kenta-wakasa/pen/GRrvxLO)
@@ -115,10 +119,10 @@ class RipplePainter extends CustomPainter {
 
 ## 3. 輪っかをアニメーションさせる
 
+### AnimationController をつくって CustomPaint に渡す
+
 まだ動きがなくて寂しいですね。
 ここからアニメーションをつけていきます。
-
-AnimationController をつくって、それを CustomPaint に渡す実装方針です。
 
 ::: details コード
 
@@ -207,6 +211,8 @@ class RipplePainter extends CustomPainter {
 Stack に List を渡すことで複数の波紋を持てるようにして、アニメーションが終了したら remove するような実装になっています。
 Unity とかだと destroy とか generate みたいなのがあって画面にオブジェクトを生成したり廃棄したりするのが簡単なのですが、Flutter はそういう実装どうするのがいいんですかね。
 
+::: details コード
+
 ```dart
 class MyHomePage extends StatefulWidget {
   @override
@@ -246,8 +252,12 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
+:::
+
 # 全体像
 
 アニメーションカーブや線の太さ、大きさなどのパラメータをいじって遊んでみてください！
+::: details コード全文
 @[gist](https://gist.github.com/kenta-wakasa/785d1250e967e754d4faf3913456b75c)
+:::
 それではまたどこかで。
