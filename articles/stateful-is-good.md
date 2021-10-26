@@ -29,8 +29,60 @@ Riverpod を学習し始めて途方に暮れ、Flutter を引退しようかと
 
 ではまず何から勉強すればいいのか。わたしは StatefulWidget を使い倒すところからはじめることをお勧めしています。
 
-StatefulWidget は画面の見た目と状態をひとつの State の中でまとめて書くことができます。しかもそれらはどちらも dart で書くことができるのです。このような書き方ができるフレームワークは、あまりないのではないかと思います。Flutter は StatefulWidget を使えるようになれば、画面も内部ロジックもすべて作れるように設計されているのです。初心者にとっては覚えなきゃいけないことは少なければ少ないほどいいと思います。
+公式ドキュメントや Flutter に関する記事などに登場するサンプルコードの多くが StatefulWidget で書かれています。
+
+StatefulWidget に慣れ親しめばそれらのコードを難なく読みこなすことができるはずです。
+
+これは Riverpod を習得するよりも価値が高いことだと思います。
 
 # StatefulWidget は怖くないよ
+
+ぼくが Flutter を始めたときは StatefulWidget が怖かったです。
+なぜか class を 2 つ作らなければ機能しないし、createState が何をしているかもよくわからないので脳にかかる負荷が大きかったのだと思います。
+
+ですがそんな深いところは考える必要がないのです。
+仕組みは慣れてきてから理解するのでいいと思います。
+
+ここで StatefulWidget の初期状態を見てみましょう。
+`stfl` とうつと自動的に雛形が生成されるはずです。
+あとはそこに Widget 名を付けてあげましょう。
+今回は `Sample` と名付けました。
+
+```dart
+class Sample extends StatefulWidget {
+  const Sample({Key? key}) : super(key: key);
+
+  
+  @override
+  _SampleState createState() => _SampleState();
+}
+
+class _SampleState extends State<Sample> {
+  /// ここに変数を書く
+
+
+  /// ここに関数を書く
+
+
+  @override
+  Widget build(BuildContext context) {
+    /// ここにUIを書く
+    return Container();
+  }
+}
+```
+
+初学者の方はまずは難しいことは考えずに `stfl` とうって StatefulWidget を作ったら、上記のコメントを頼りに UI と変数と関数を書いていくのがいいと思っています。
+慣れてきたらそれぞれがどういう意味合いなのか調べたり考えたりするとよいでしょう。
+
+# StatefulWidget で躓きそうなところ
+
+初学者の方が躓きそうなポイントが 3 つあるので、それらをまとめて解説します。
+
+1. 画面を更新するために `setState((){})` を呼ぶ
+2. 最初に一度だけないかを実行したい場合は `initState()` に書く
+3. 受け取った変数は widget.<変数名> で使うことができる
+
+## 1. 画面を更新するために `setState((){})` を呼ぶ
 
 # どうしても無理な時はシングルトンという手もある
