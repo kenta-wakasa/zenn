@@ -1,0 +1,9 @@
+title: "Flutter逆引き辞典"
+summary: "Flutterに関するちょっとしたお悩みを解決する逆引き辞典です"
+topics: ["flutter"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - example1
+  - example2
