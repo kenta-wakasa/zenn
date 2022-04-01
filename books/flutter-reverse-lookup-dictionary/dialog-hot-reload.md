@@ -1,5 +1,5 @@
 ---
-title: "Q.1 - Q.10"
+title: "Q.1 dialog でも hot reload がしたい"
 ---
 
 # Q.1 dialog でも hot reload がしたい

@@ -19,7 +19,7 @@ summary: 'Flutterに関するちょっとしたお悩みを解決する逆引き
 topics: ["flutter"]
 published: true
 price: 0 # 有料の場合200〜5000
-toc_depth: 1
+toc_depth: 3
 # 本に含めるチャプターを順番に並べましょう
 chapters:
-  - q1-q10
+  - dialog-hot-reload
