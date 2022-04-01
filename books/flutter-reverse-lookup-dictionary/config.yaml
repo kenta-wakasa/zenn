@@ -1,9 +1,25 @@
 title: "Flutter逆引き辞典"
-summary: "Flutterに関するちょっとしたお悩みを解決する逆引き辞典です"
+summary: 'Flutterに関するちょっとしたお悩みを解決する逆引き辞典です。
+
+寄せられた質問に 1 問 1 答形式でお答えしていきます！
+
+1 日 1 問ずつ解答予定です。
+
+
+質問を随時募集しています！
+
+「〇〇したい」という形式でIssueに投稿していただけると嬉しいです。
+
+
+質問はこちらへ→ https://github.com/kenta-wakasa/zenn/issues
+
+
+ぜひネタ作りにご協力ください。
+'
 topics: ["flutter"]
-published: false
+published: true
 price: 0 # 有料の場合200〜5000
+toc_depth: 1
 # 本に含めるチャプターを順番に並べましょう
 chapters:
-  - example1
-  - example2
+  - q1-q10
