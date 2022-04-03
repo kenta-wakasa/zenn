@@ -24,3 +24,4 @@ toc_depth: 3
 chapters:
   - 001-dialog-hot-reload
   - 002-await-push
+  - 003-want-to-use-stateful-widget
