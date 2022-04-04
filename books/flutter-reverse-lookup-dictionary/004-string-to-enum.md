@@ -71,10 +71,10 @@ Job.values.byName(value);
 
 この機能は dart 2.15 から使用可能になりました。
 
-ではこれを使って JSON データから User インスタンスを作成する fromMap メソッドをつくってみましょう。
+ではこれを使って JSON データから User インスタンスを作成する fromJson メソッドをつくってみましょう。
 
 ```dart
-factory User.fromMap(String json) {
+factory User.fromJson(String json) {
   final map = jsonDecode(json) as Map<String, dynamic>;
   return User(
     name: map['name'],
@@ -99,7 +99,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 void main() {
-  final user = User.fromMap(source);
+  final user = User.fromJson(source);
   log(user.toString());
 }
 
@@ -125,7 +125,7 @@ class User {
     required this.job,
   });
 
-  factory User.fromMap(String json) {
+  factory User.fromJson(String json) {
     final map = jsonDecode(json) as Map<String, dynamic>;
     return User(
       name: map['name'],
