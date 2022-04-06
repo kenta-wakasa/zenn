@@ -27,3 +27,4 @@ chapters:
   - 003-want-to-use-stateful-widget
   - 004-string-to-enum
   - 005-clip-image
+  - 006-push-page-on-dialog
