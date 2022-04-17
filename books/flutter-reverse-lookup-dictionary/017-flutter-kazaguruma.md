@@ -2,7 +2,9 @@
 title: Flutterロゴで風車を作りたい
 ---
 
-A. RotationTransition と　 AnimationController をうまく使いましょう
+![](/images/q17/1.gif)
+
+## A. RotationTransition と　 AnimationController をうまく使いましょう
 
 唐突に Flutter ロゴをぐるぐる回転させたくなったときに役立つ記事を書いていきます。
 
