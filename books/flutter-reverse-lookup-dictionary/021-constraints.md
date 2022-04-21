@@ -29,8 +29,6 @@ BoxConstraints は縦横の最小幅と最大幅を決めることができま�
 
 ## コピペで動くサンプルコード
 
-![](/images/q21/1.gif)
-
 ```dart
 import 'package:flutter/material.dart';
 
