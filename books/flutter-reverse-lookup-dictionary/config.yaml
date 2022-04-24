@@ -45,3 +45,4 @@ chapters:
   - 021-constraints
   - 022-postal_code_to_address
   - 023-select-multi-tag
+  - 024-movable-widget
