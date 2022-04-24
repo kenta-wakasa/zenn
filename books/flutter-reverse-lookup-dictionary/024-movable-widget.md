@@ -33,7 +33,7 @@ onPanUpdate を使えばドラッグしている指やマウスの位置が変�
 
 ## Positioned について
 
-ここで取得した座標情報をつかって Widget を配置するには Positioned を使います。Positioned はこ Widget を好きな位置に配置することができる Widget です。
+ここで取得した座標情報をつかって Widget を配置するには Positioned を使います。Positioned は子 Widget を好きな位置に配置することができる Widget です。
 
 使い方はこんな感じです。
 
