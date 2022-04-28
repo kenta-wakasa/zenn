@@ -49,3 +49,4 @@ chapters:
   - 025-custom-page-route
   - 026-input-card
   - 027-generate-log-on-tap
+  - 028-singleton
