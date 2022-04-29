@@ -50,3 +50,4 @@ chapters:
   - 026-input-card
   - 027-generate-log-on-tap
   - 028-singleton
+  - 029-selectable-copyable-text
