@@ -165,6 +165,10 @@ freezed と一緒に使うこともできるそうなので、freezed を普段�
 
 https://pub.dev/documentation/objectbox/latest/objectbox/Entity/realClass.html
 
+## box を open ではなく store を open するだけでいい
+
+hive の場合は box に名前をつけて open しなければいけませんが、ObjectBox は store を open すればすべての box が使用可能です。box は Entity の型と関連づいているので、なんでも追加できる hive よりも安全です。
+
 細かな違いはありますが、大差はないと感じましたので、Hive を使っている方は ObjectBox を採用するのもありかと思います。
 
 # コピペで動くサンプルコード
