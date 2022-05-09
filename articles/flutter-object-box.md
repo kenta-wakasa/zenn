@@ -3,7 +3,7 @@ title: "Flutter で ObjectBox つかってみた"
 emoji: "🐥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter, objectbox]
-published: false
+published: true
 ---
 
 # ObjectBox とは
