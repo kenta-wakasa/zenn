@@ -20,17 +20,23 @@ https://github.com/kenta-wakasa/riverpod/tree/master/examples/marvel
 
 - https://developer.marvel.com で APIKey を Get
 - assets/configurations.json に取得した key を記述
-- flutter create . で Android 向けのビルド環境を構築
-- flutter run でビルド
+- `flutter create .` で Android 向けのビルド環境を構築
+- `flutter pub get` でパッケージを取得
+- `flutter pub run build_runner build` で freezed 関連ファイルを生成
+- `flutter run` でビルド
 
 README に書かれている通りですね。特に問題なくビルドできました。
 
 ![](/images/marvel/build.gif)
 
-動かしてみて、主な機能は次の 3 つにまとめられると思いました。
+# 使われている provider を調べる
 
-- 一覧取得
-- 検索
-- Deep link
+Riverpod のサンプルコードなので
 
-#
+- selectedCharacterId
+- character
+- repository
+- characterPages
+- charactersCount
+- characterAtIndex
+- \_characterIndex
