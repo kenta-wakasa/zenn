@@ -3,7 +3,7 @@ title: "Flutterでインターネットの通信速度を測定する"
 emoji: "🏃"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [flutter, dart]
-published: false
+published: true
 ---
 
 ![](/images/speed_test.gif)
